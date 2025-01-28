@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Centrado con Sonido</title>
+    <title>Video Centrado con Sonido Automático</title>
     <style>
         * {
             margin: 0;
@@ -27,6 +27,10 @@
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 90%; /* Limita el tamaño máximo */
         }
 
         h1 {
@@ -36,28 +40,33 @@
         video {
             width: 100%;
             max-width: 800px;
+            max-height: 450px; /* Limitar altura máxima */
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-
-        #playButton {
-            margin-top: 15px;
-            padding: 10px 20px;
-            font-size: 18px;
-            background-color: #ff4081;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            display: none;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Mi Video</h1>
+    
         <video id="video" autoplay loop>
             <source src="ScreenRecording_01-28-2025 10-33-36_1.mp4" type="video/mp4">
             Tu navegador no soporta videos.
         </video>
-        <button id="playButton">Activar
+    </div>
+
+    <script>
+        const video = document.getElementById('video');
+
+        // Intenta activar el sonido automáticamente
+        video.muted = false; // Asegúrate de que el sonido esté habilitado
+        video.play().then(() => {
+            console.log("El video se está reproduciendo con sonido.");
+        }).catch(error => {
+            console.warn("El navegador ha bloqueado la reproducción automática con sonido. Intentando activar el sonido manualmente.");
+            video.muted = true; // Si no es posible, desactiva el sonido
+        });
+    </script>
+</body>
+</html>
+
