@@ -48,9 +48,9 @@
 
         .container {
             display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+            flex-direction: row; /* Imágenes en una fila */
+            justify-content: center; /* Centrar horizontalmente */
+            align-items: center; /* Centrar verticalmente */
             gap: 15px;
         }
 
@@ -69,7 +69,7 @@
         .buttons {
             margin-top: 20px;
             display: flex;
-            justify-content: center;
+            justify-content: center; /* Centrar botones horizontalmente */
             gap: 15px;
         }
 
@@ -103,85 +103,82 @@
 
     <div class="container">
         <img src="https://wonder-day.com/wp-content/uploads/2022/03/wonder-day-avatar-memes-cats-69.jpg" alt="Gatito adorable">
-        <img src="https://i.pinimg.com/564x/29/05/14/290514c16cc71bf5c9b18e1d11cdad4a.jpg" alt="Gatito lindo">
+        <img src="data:image/jpeg;base64,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" alt="Gatito lindo">
     </div>
 
     <div class="buttons">
         <button id="yesBtn" class="btn">Sí 💕</button>
         <button id="noBtn" class="btn">No 😢</button>
     </div>
+<script>
+    const noBtn = document.getElementById('noBtn');
+    const yesBtn = document.getElementById('yesBtn');
 
-    <script>
-        const noBtn = document.getElementById('noBtn');
-        const yesBtn = document.getElementById('yesBtn');
-        let yesBtnSize = 20; // Tamaño inicial del botón "Sí 💕"
+    function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.innerHTML = "💖";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+        document.body.appendChild(heart);
+        setTimeout(() => {
+            heart.remove();
+        }, 5000);
+    }
 
-        function createHeart() {
-            const heart = document.createElement("div");
-            heart.classList.add("heart");
-            heart.innerHTML = "💖";
-            heart.style.left = Math.random() * 100 + "vw";
-            heart.style.animationDuration = Math.random() * 2 + 3 + "s";
-            document.body.appendChild(heart);
-            setTimeout(() => {
-                heart.remove();
-            }, 5000);
-        }
+    setInterval(createHeart, 500);
 
-        setInterval(createHeart, 500);
+    noBtn.addEventListener('mouseover', () => {
+        const randomX = Math.random() * (window.innerWidth - 100);
+        const randomY = Math.random() * (window.innerHeight - 100);
+        noBtn.style.position = 'absolute';
+        noBtn.style.left = `${randomX}px`;
+        noBtn.style.top = `${randomY}px`;
 
-        noBtn.addEventListener('mouseover', () => {
-            const randomX = Math.random() * (window.innerWidth - 100);
-            const randomY = Math.random() * (window.innerHeight - 100);
-            noBtn.style.position = 'absolute';
-            noBtn.style.left = `${randomX}px`;
-            noBtn.style.top = `${randomY}px`;
+        yesBtn.style.fontSize = `${parseInt(yesBtn.style.fontSize) + 5}px`;
+    });
 
-            // Aumentar el tamaño del botón "Sí 💕"
-            yesBtnSize += 5;
-            yesBtn.style.fontSize = `${yesBtnSize}px`;
-            yesBtn.style.padding = `${yesBtnSize / 1.5}px ${yesBtnSize * 1.5}px`;
-        });
+    noBtn.addEventListener('click', () => {
+        // Crear la imagen del gatito en miniatura y el mensaje
+        const miniCatImg = document.createElement('img');
+        miniCatImg.src = 'https://i.pinimg.com/564x/29/05/14/290514c16cc71bf5c9b18e1d11cdad4a.jpg';
+        miniCatImg.style.position = 'fixed';
+        miniCatImg.style.top = '50%';
+        miniCatImg.style.left = '50%';
+        miniCatImg.style.transform = 'translate(-50%, -50%)';
+        miniCatImg.style.width = '100px';
+        miniCatImg.style.height = 'auto';
+        miniCatImg.style.zIndex = '1000';
 
-        noBtn.addEventListener('click', () => {
-            const miniCatImg = document.createElement('img');
-            miniCatImg.src = 'https://i.pinimg.com/564x/29/05/14/290514c16cc71bf5c9b18e1d11cdad4a.jpg';
-            miniCatImg.style.position = 'fixed';
-            miniCatImg.style.top = '50%';
-            miniCatImg.style.left = '50%';
-            miniCatImg.style.transform = 'translate(-50%, -50%)';
-            miniCatImg.style.width = '100px';
-            miniCatImg.style.height = 'auto';
-            miniCatImg.style.zIndex = '1000';
+        const message = document.createElement('div');
+        message.innerText = '¿Seguro querías poner que no? Te doy otra oportunidad! 💖';
+        message.style.position = 'fixed';
+        message.style.top = '55%';
+        message.style.left = '50%';
+        message.style.transform = 'translateX(-50%)';
+        message.style.fontSize = '1.5rem';
+        message.style.color = '#fff';
+        message.style.fontFamily = "'Pacifico', cursive";
+        message.style.padding = '15px';
+        message.style.backgroundColor = 'rgba(255, 0, 0, 0.7)'; // Fondo rojo semitransparente
+        message.style.borderRadius = '10px'; // Bordes redondeados
+        message.style.zIndex = '1000';
 
-            const message = document.createElement('div');
-            message.innerText = '¿Seguro querías poner que no? Te doy otra oportunidad! 💖';
-            message.style.position = 'fixed';
-            message.style.top = '55%';
-            message.style.left = '50%';
-            message.style.transform = 'translateX(-50%)';
-            message.style.fontSize = '1.5rem';
-            message.style.color = '#fff';
-            message.style.fontFamily = "'Pacifico', cursive";
-            message.style.padding = '15px';
-            message.style.backgroundColor = 'rgba(255, 0, 0, 0.7)';
-            message.style.borderRadius = '10px';
-            message.style.zIndex = '1000';
+        document.body.appendChild(miniCatImg);
+        document.body.appendChild(message);
 
-            document.body.appendChild(miniCatImg);
-            document.body.appendChild(message);
+        setTimeout(() => {
+            miniCatImg.remove();
+            message.remove();
+        }, 3000); // Eliminar la imagen y el mensaje después de 3 segundos
+    });
 
-            setTimeout(() => {
-                miniCatImg.remove();
-                message.remove();
-            }, 3000);
-        });
+    yesBtn.addEventListener('click', () => {
+        alert("¡Sabía que dirías que sí! 💖🎉");
+        window.location.href = 'video.html';
+    });
+</script>
 
-        yesBtn.addEventListener('click', () => {
-            alert("¡Sabía que dirías que sí! 💖🎉");
-            window.location.href = 'video.html';
-        });
-    </script>
 </body>
 </html>
 
