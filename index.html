@@ -135,8 +135,11 @@
         noBtn.style.left = `${randomX}px`;
         noBtn.style.top = `${randomY}px`;
 
-        yesBtn.style.fontSize = `${parseInt(yesBtn.style.fontSize) + 5}px`;
-    });
+        yesBtnSize += 5;
+                yesBtn.style.fontSize = `${yesBtnSize}px`;
+            }
+        });
+
 
     noBtn.addEventListener('click', () => {
         // Crear la imagen del gatito en miniatura y el mensaje
