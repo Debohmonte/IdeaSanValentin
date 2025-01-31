@@ -117,7 +117,7 @@
         let clickCount = 0;
         let swap = false;
         let yesBtnSize = 20;
-
+    
         function createHeart() {
             const heart = document.createElement("div");
             heart.classList.add("heart");
@@ -129,9 +129,9 @@
                 heart.remove();
             }, 5000);
         }
-
+    
         setInterval(createHeart, 500);
-
+    
         noBtn.addEventListener('mouseover', () => {
             if (!swap && clickCount < 4) {
                 const randomX = Math.random() * (window.innerWidth - 100);
@@ -139,12 +139,12 @@
                 noBtn.style.position = 'absolute';
                 noBtn.style.left = `${randomX}px`;
                 noBtn.style.top = `${randomY}px`;
-
+    
                 yesBtnSize += 5;
                 yesBtn.style.fontSize = `${yesBtnSize}px`;
             }
         });
-
+    
         noBtn.addEventListener('click', () => {
             clickCount++;
             if (clickCount === 4) {
@@ -154,13 +154,45 @@
                 noBtn.innerText = yesBtn.innerText;
                 yesBtn.innerText = tempText;
             }
+    
+            // Crear la imagen del gatito en miniatura y el mensaje
+            const miniCatImg = document.createElement('img');
+            miniCatImg.src = 'https://i.pinimg.com/564x/29/05/14/290514c16cc71bf5c9b18e1d11cdad4a.jpg';
+            miniCatImg.style.position = 'fixed';
+            miniCatImg.style.top = '50%';
+            miniCatImg.style.left = '50%';
+            miniCatImg.style.transform = 'translate(-50%, -50%)';
+            miniCatImg.style.width = '100px';
+            miniCatImg.style.height = 'auto';
+            miniCatImg.style.zIndex = '1000';
+    
+            const message = document.createElement('div');
+            message.innerText = '¿Seguro querías poner que no? Te doy otra oportunidad! 💖';
+            message.style.position = 'fixed';
+            message.style.top = '55%';
+            message.style.left = '50%';
+            message.style.transform = 'translateX(-50%)';
+            message.style.fontSize = '1.5rem';
+            message.style.color = '#fff';
+            message.style.fontFamily = "'Pacifico', cursive";
+            message.style.zIndex = '1000';
+    
+            document.body.appendChild(miniCatImg);
+            document.body.appendChild(message);
+    
+            setTimeout(() => {
+                miniCatImg.remove();
+                message.remove();
+            }, 3000); // Eliminar la imagen y el mensaje después de 3 segundos
         });
-
+    
         yesBtn.addEventListener('click', () => {
             alert("¡Sabía que dirías que sí! 💖🎉");
             window.location.href = 'video.html';
         });
     </script>
+    
 </body>
 </html>
+
 
