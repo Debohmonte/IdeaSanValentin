@@ -110,9 +110,12 @@
         <button id="yesBtn" class="btn">Sí 💕</button>
         <button id="noBtn" class="btn">No 😢</button>
     </div>
+
 <script>
     const noBtn = document.getElementById('noBtn');
     const yesBtn = document.getElementById('yesBtn');
+
+    let yesBtnSize = 20; // Tamaño inicial del botón "Sí 💕"
 
     function createHeart() {
         const heart = document.createElement("div");
@@ -135,11 +138,10 @@
         noBtn.style.left = `${randomX}px`;
         noBtn.style.top = `${randomY}px`;
 
+        // Incrementa el tamaño del botón "Sí 💕"
         yesBtnSize += 5;
-                yesBtn.style.fontSize = `${yesBtnSize}px`;
-            }
-        });
-
+        yesBtn.style.fontSize = `${yesBtnSize}px`;
+    });
 
     noBtn.addEventListener('click', () => {
         // Crear la imagen del gatito en miniatura y el mensaje
@@ -184,6 +186,7 @@
 
 </body>
 </html>
+
 
 
 
